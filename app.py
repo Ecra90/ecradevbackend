@@ -8,9 +8,8 @@ app = Flask(__name__)
 
 CORS(app)
 
-DATABASE = "database.db"
+DATABASE = "/tmp/database.db"
 
-# Admin login token
 ADMIN_TOKEN = "EcraDev2026Admin"
 
 
@@ -35,6 +34,14 @@ def init_db():
 
     conn.commit()
     conn.close()
+
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "success",
+        "message": "EcraDev API is running"
+    })
 
 
 @app.route("/api/health", methods=["GET"])
@@ -126,7 +133,6 @@ def get_projects():
 
 @app.route("/api/messages", methods=["GET"])
 def get_messages():
-
     authorization = request.headers.get("Authorization", "")
 
     if not authorization:
@@ -134,7 +140,6 @@ def get_messages():
             "message": "Admin token is required."
         }), 401
 
-    # Expect: Bearer EcraDev2026Admin
     if not authorization.startswith("Bearer "):
         return jsonify({
             "message": "Invalid authorization format."
@@ -207,16 +212,10 @@ def delete_message(message_id):
     }), 200
 
 
-@app.route("/", methods=["GET"])
-def home():
-    return jsonify({
-        "status": "success",
-        "message": "EcraDev API is running"
-    })
+init_db()
+
 
 if __name__ == "__main__":
-    init_db()
-
     app.run(
         debug=True,
         port=5000
