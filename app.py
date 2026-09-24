@@ -206,6 +206,14 @@ def delete_message(message_id):
         "message": "Message deleted successfully."
     }), 200
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "success",
+        "message": "EcraDev API is running"
+    })
+
 if __name__ == "__main__":
     init_db()
 
