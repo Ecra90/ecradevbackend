@@ -110,7 +110,7 @@ def get_projects():
     projects = [
         {
             "id": 1,
-            "title": "Eclix",
+            "title": "Eclix Royal Homes Project",
             "description": "A marketplace web application for browsing and managing online listings.",
             "technologies": ["React", "Flask", "SQLite", "REST API"],
             "github": "https://github.com/Ecra90/Eclix-Royal-Homes-and-Properties-Final-Project",
@@ -118,11 +118,11 @@ def get_projects():
         },
         {
             "id": 2,
-            "title": "Personal  Portfolio",
-            "description": "A personalized web experience for showcasing skills, abilities and personal experiences.",
+            "title": "Anniversary Project",
+            "description": "A personalized web experience for showcasing memories, achievements and special moments.",
             "technologies": ["React", "CSS", "JavaScript"],
-            "github": "https://github.com/Ecra90/ecradev",
-            "demo": "https://ecradev-nu.vercel.app"
+            "github": "https://github.com/Ecra90/firstanniversary",
+            "demo": "https://firstanniversary-8yan.vercel.app"
         },
         {
             "id": 3,
