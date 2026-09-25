@@ -113,24 +113,24 @@ def get_projects():
             "title": "Eclix",
             "description": "A marketplace web application for browsing and managing online listings.",
             "technologies": ["React", "Flask", "SQLite", "REST API"],
-            "github": "#",
-            "demo": "#"
+            "github": "https://github.com/Ecra90/Eclix-Royal-Homes-and-Properties-Final-Project",
+            "demo": "https://eclix-royal-homes-and-properties-fi-seven.vercel.app"
         },
         {
             "id": 2,
-            "title": "Anniversary Project",
-            "description": "A personalized web experience for showcasing memories, messages and special moments.",
+            "title": "Personal  Portfolio",
+            "description": "A personalized web experience for showcasing skills, abilities and personal experiences.",
             "technologies": ["React", "CSS", "JavaScript"],
-            "github": "#",
-            "demo": "#"
+            "github": "https://github.com/Ecra90/ecradev",
+            "demo": "https://ecradev-nu.vercel.app"
         },
         {
             "id": 3,
             "title": "Tennis Project",
             "description": "A tennis-focused web application providing tennis-related information and features.",
             "technologies": ["React", "Flask", "API"],
-            "github": "#",
-            "demo": "#"
+            "github": "https://github.com/Ecra90/tennis",
+            "demo": "https://kyutennis.vercel.app"
         }
     ]
 
